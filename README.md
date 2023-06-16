@@ -61,7 +61,6 @@ git push origin feature/nueva-caracteristica
 
 5. Abre una solicitud de extracción en GitHub y describe los cambios realizados.
 
-6. Abre un pull request en este repositorio.
 
 Agradecemos de antemano tu contribución al proyecto. Juntos podemos mejorar y expandir las capacidades de reconocimiento de voz.
 
