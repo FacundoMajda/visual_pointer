@@ -23,7 +23,7 @@ class detectormanos():
         # Estos numeros hacen referencia a los nodos de los extremos de los dedos (punta)
         self.tip = [4, 8, 12, 16, 20]
 
-    # <---- Funcion encontrar manos
+    # <---- Funcion   find & draw   manos
 
     def encontrarmanos(self, frame, dibujar=True):
         imgcolor = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
@@ -36,3 +36,22 @@ class detectormanos():
                     self.dibujo.draw_landmarks(
                         frame, mano, self.manos.HAND_CONNECTIONS)
         return frame
+
+
+# <---- Funcion Find Position
+def encontrarposicion(self, frame, ManoNum=0, dibujar=True):
+    xlista = []
+    ylista = []
+    bbox = []
+    self.lista = []
+    if self.resultados.multi_hand_landmarks:
+        miMano = self.resultados.multi_hand_landmarks[ManoNum]
+        for id, lm in enumerate(miMano.landmark):
+            alto, ancho, c = frame.shape  # dimensionar //fps
+            # conversion de informacion a PIXELES (px)
+            cx, cy = int(lm.x * ancho), int(lm.y * alto)
+            xlista.append(cx)
+            ylista.append(cy)
+            self.lista.append([id, cx, cy])
+            if dibujar:
+                cv2.circle(frame, (cx, cy), 5, (0, 0, 0), cv2.FILLED)
