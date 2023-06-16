@@ -12,24 +12,19 @@ Desde el Instituto Politecnico Formosa - Argentina
 - OpenCV (cv2)
 - MediaPipe
 
-## Instalación
-
-1. Clona este repositorio en tu máquina local:
-
-   ```
-   git clone https://github.com/FacundoMajda/visual_pointer
-   ```
-
-2.
-
 ## Cómo utilizar el mouse virtual
 
 1. Clona este repositorio en tu máquina local.
+
+```
+  git clone https://github.com/FacundoMajda/visual_pointer
+```
+
 2. Navega hasta el directorio del proyecto.
 3. Ejecuta el archivo `undefined`:
 
 ```
-python .py
+python ---.py
 
 ```
 
